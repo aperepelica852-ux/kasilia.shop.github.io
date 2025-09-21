@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Купити дитячу святкову сукню</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Купити дитячу святкову сукню</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Банер */
+    .promo-banner {
+      background: linear-gradient(135deg, #f9e1f7, #ffe6cc);
+      text-align: center;
+      padding: 40px 20px;
+      margin: 50px auto;
+      border-radius: 20px;
+      animation: glow 3s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px rgba(255, 182, 193, 0.6); }
+      to { box-shadow: 0 0 25px rgba(255, 105, 180, 0.8); }
+    }
+    .promo-banner h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #ff4d88;
+    }
+    .promo-banner .highlight {
+      font-weight: 700;
+      color: #d1006f;
+    }
+    .promo-banner .shop-now {
+      margin-top: 15px;
+      background: #ff6fa5;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    .promo-banner .shop-now:hover { background: #ff4d88; }
+
+    /* Відгуки */
+    .reviews-section {
+      max-width: 900px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 0 10px;
+    }
+    .reviews-section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff4d88;
+    }
+    .reviews-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px 0;
+    }
+    .reviews-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .reviews-slider::-webkit-scrollbar-thumb {
+      background-color: #ff6fa5;
+      border-radius: 4px;
+    }
+    .review {
+      flex: 0 0 80%;
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      scroll-snap-align: center;
+      transition: transform 0.3s;
+    }
+    .review:hover { transform: translateY(-5px); }
+    .review p { font-style: italic; font-size: 1.1em; margin-bottom: 10px; }
+    .review span { font-weight: 600; color: #ff4d88; }
+
+    /* Форма відгуків */
+    #review-form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #review-form input, #review-form textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    #review-form textarea { resize: vertical; min-height: 80px; }
+    #review-form button {
+      background: #ff6fa5;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    #review-form button:hover { background: #ff4d88; }
+
+    /* Загальні стилі */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fdf5f9;
+      margin: 0;
+      color: #333;
+    }
+    .info-section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 15px;
+    }
+    .info-section h2 {
+      color: #ff4d88;
+      margin-bottom: 15px;
+    }
+    .info-section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  </style>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">KASILIA.DRESS</div>
+
+    <div class="search-block">
+      <input type="text" placeholder="Пошук">
+      <img src="icon-search.png" alt="Пошук">
+    </div>
+
+    <div class="paw-block">
+      <img src="paw.png" alt="Лапка котика" class="paw">
+    </div>
+
+    <div class="icon-block">
+      <img src="icon-heart.png" alt="Обране" id="open-favorites">
+      <img src="icon-cart.png" alt="Кошик" id="open-cart">
+      <span id="user-name" style="display:none;"></span>
+      <button id="sign-out-btn" style="display:none;">Вийти</button>
+    </div>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="#" class="active"><b>ГОЛОВНА</b></a>
+    <a href="novinki1.html"><b>НОВИНКИ</b></a>
+    <a href="novinki2.html"><b>ХІТИ ПРОДАЖІВ</b></a>
+    <a href="novinki3.html"><b>БЛОГ</b></a>
+    <a href="novinki4.html"><b>МИ</b></a>
+  </nav>
+</header>
+
+<!-- 🟡 Кошик -->
+<div id="cart-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Кошик</h2>
+    <ul id="cart-list" style="list-style:none; padding:0;"></ul>
+    <a href="oplata.html"><button class="cart-button checkout-button">Оформити замовлення</button></a>
+    <button class="cart-button close-button" id="close-cart">Закрити</button>
+  </div>
+</div>
+
+<!-- 🟡 Детальніше -->
+<div id="product-details-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <button class="close-button" id="close-details">✕ Закрити</button>
+    <div id="product-details-inner"></div>
+  </div>
+</div>
+
+<!-- Банер -->
+<section class="hero-banner">
+  <img src="hero-banner.jpg" alt="Головне фото">
+</section>
+<!-- 🟢 Фільтри -->
+<section class="filters-section">
+  <div class="filters-container">
+    <h3>Фільтри товарів</h3>
+
+    <label for="filter-price">Ціна до:</label>
+    <select id="filter-price">
+      <option value="all">Всі ціни</option>
+
+      <option value="3000">до 3000 грн</option>
+      <option value="4000">до 4000 грн</option>
+    </select>
+
+    <label for="filter-name">Назва сукні:</label>
+    <input type="text" id="filter-name" placeholder="Введіть назву...">
+  </div>
+</section>
+
+<style>
+.filters-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 10px 20px;
+  background: #fff0f5;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.filters-container label {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #ff4d88;
+}
+
+.filters-container select,
+.filters-container input {
+  padding: 8px 12px;
+  margin: 0 15px 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+</style>
+
+<script>
+// Фільтрація товарів
+document.addEventListener('DOMContentLoaded', () => {
+  const filterPrice = document.getElementById('filter-price');
+  const filterName = document.getElementById('filter-name');
+  const productCards = document.querySelectorAll('.product-card');
+
+  function filterProducts() {
+    const priceValue = filterPrice.value;
+    const nameValue = filterName.value.toLowerCase();
+
+    productCards.forEach(card => {
+      const cardPrice = parseInt(card.querySelector('p').textContent.replace(/\D/g, ''));
+      const cardName = card.querySelector('h3').textContent.toLowerCase();
+
+      let priceMatch = priceValue === 'all' || cardPrice <= parseInt(priceValue);
+      let nameMatch = cardName.includes(nameValue);
+
+      if(priceMatch && nameMatch) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  filterPrice.addEventListener('change', filterProducts);
+  filterName.addEventListener('input', filterProducts);
+});
+</script>
+
+<!-- Каталог -->
+<main class="main-content">
+  <section class="product-section">
+    <div class="product-grid">
+      <div class="product-card" id="adel" data-id="adel">
+        <img src="dress-adel.jpg" alt="Адель">
+        <h3>Адель</h3>
+        <p>3800 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="adel">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="adel">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+
+      <div class="product-card" id="kamila" data-id="kamila">
+        <img src="dress-kamila.jpg" alt="Каміла">
+        <h3>Каміла</h3>
+        <p>2500 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="kamila">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="kamila">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+
+      <div class="product-card" id="emili" data-id="emili">
+        <img src="dress-emili.jpg" alt="Емілі">
+        <h3>Емілі</h3>
+        <p>3100 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="emili">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="emili">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+
+      <div class="product-card" id="keri" data-id="keri">
+        <img src="dress-keri.jpg" alt="Кері">
+        <h3>Кері</h3>
+        <p>2700 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="keri">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="keri">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+
+      <div class="product-card" id="suzi" data-id="suzi">
+        <img src="dress-suzi.jpg" alt="Сузі">
+        <h3>Сузі</h3>
+        <p>2900 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="suzi">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="suzi">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+
+      <div class="product-card" id="eliza" data-id="eliza">
+        <img src="dress-eliza.jpg" alt="Еліза">
+        <h3>Еліза</h3>
+        <p>3500 грн</p>
+        <div class="card-icons">
+          <img src="icon-heart.png" alt="Обране" class="add-favorite" data-id="eliza">
+          <img src="icon-cart.png" alt="Кошик" class="add-cart" data-id="eliza">
+        </div>
+        <button class="details-button">Детальніше</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="info-section">
+  <div class="info-container">
+    <h2>Магазин дитячих святкових суконь</h2> <p>Свято у житті дитини — це завжди чарівність і радість. І жодне свято не обходиться без красивої сукні, яка підкреслить ніжність і зробить образ маленької принцеси неповторним. Гарно підібраний наряд допоможе дитині відчути впевненість, підняти настрій і подарує справжнє відчуття казки.</p> <p>Особливо важливо подбати про образ на дні народження, новорічних ранках, весіллях чи будь-яких інших урочистих подіях. Адже дитячий гардероб має бути не лише зручним, а й стильним та святковим. У нашому інтернет-магазині ви знайдете великий вибір дитячих святкових суконь з доставкою по Києву та всій Україні.</p> <h2>Інтернет-магазин дитячих суконь преміальної якості</h2> <p>Ми ретельно обираємо тканини та фурнітуру, щоб святкові сукні були не лише красивими, а й зручними. У виробництві використовуємо бавовну, шовк, фатин, мереживо та інші якісні матеріали, які не подразнюють дитячу шкіру. Особливу увагу приділяємо деталям — від крою і застібок до прикрас, щоб ваша донечка почувалася справжньою принцесою.</p> <p> <span class="highlight">Колекції нашого магазину</span> — це поєднання ніжності, краси та чарівності. Велика палітра кольорів дозволить обрати як класичні білі чи пастельні відтінки, так і яскраві моделі для маленьких модниць.</p> <p>Ми прагнемо, щоб кожна дитина виглядала неповторно, а батьки залишалися задоволеними якістю та сервісом.</p> <p>Замовити дитячі святкові сукні можна у будь-який час. Ми працюємо без вихідних та допомагаємо батькам підібрати ідеальний наряд для найважливіших подій у житті їхньої дитини.</p>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Допомога</h4>
+      <ul>
+        <li><a href="delivery.html">Доставка та оплата</a></li>
+        <li><a href="obmin.html">Обмін та повернення</a></li>
+        <li><a href="privacy.html">Політика конфіденційності</a></li>
+        <li><a href="oferta.html">Оферта</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Про компанію</h4>
+      <ul>
+        <li><a href="kontakty.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Дізнатися більше про нас</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/..."><img src="Facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/kasilia_dress"><img src="Instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@kasilia_dress.shop"><img src="TikTok.png" alt="TikTok"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Обране -->
+<div id="favorites-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Обране</h2>
+    <ul id="favorites-list" style="list-style:none; padding:0;"></ul>
+    <button class="close-button" id="close-favorites">Закрити</button>
+  </div>
+</div>
+
+<!-- Скрипти -->
+<script src="details.js"></script>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+<script src="Search.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewForm = document.getElementById('review-form');
+  const reviewList = document.getElementById('reviews-list');
+
+  // Функція для додавання відгуку в DOM
+  function addReview(name, text) {
+    const newReview = document.createElement('div');
+    newReview.className = 'review';
+    newReview.innerHTML = `<p>“${text}”</p><span>— ${name}</span>`;
+    reviewList.appendChild(newReview);
+  }
+
+  // Завантаження відгуків з localStorage при старті
+  const savedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
+  savedReviews.forEach(r => addReview(r.name, r.text));
+
+  // Додавання нового відгуку
+  reviewForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('review-name').value.trim();
+    const text = document.getElementById('review-text').value.trim();
+
+    if(name && text) {
+      addReview(name, text);
+
+      // Зберігаємо в localStorage
+      savedReviews.push({name, text});
+      localStorage.setItem('reviews', JSON.stringify(savedReviews));
+
+      // Очищуємо форму
+      document.getElementById('review-name').value = '';
+      document.getElementById('review-text').value = '';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

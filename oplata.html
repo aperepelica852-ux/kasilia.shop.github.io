@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Оплата сукні</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fff5f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .payment-card, .thankyou-message {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    h2 {
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .details p {
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #b02a6e;
+    }
+
+    .qr-code {
+      margin: 20px 0;
+    }
+
+    .qr-code img {
+      max-width: 200px;
+      border: 5px solid #ffe6ef;
+      border-radius: 15px;
+    }
+
+    .btns {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-pay {
+      background: #ff69b4;
+      color: white;
+    }
+
+    .btn-pay:hover {
+      background: #e0569f;
+    }
+
+    .btn-back {
+      background: #ffe6ef;
+      color: #b02a6e;
+    }
+
+    .btn-back:hover {
+      background: #f8cfe0;
+    }
+
+    /* Анімація для повідомлення */
+    .thankyou-message {
+      display: none;
+      font-size: 20px;
+      color: #d63384;
+      animation: fadeInScale 0.8s ease forwards;
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  
+</head>
+<body>
+    
+  <div class="payment-card" id="paymentCard">
+    <h2>Реквізити для оплати</h2>
+    <div class="details">
+      <p><span class="highlight">Номер картки:</span> 4441 1144 1931 1814</p>
+      <p><span class="highlight">Отримувач:</span> Цимбалюк Дарина Юріївна</p>
+      <p><span class="highlight">Сума:</span> перегляньте суму на сайті</p>
+      <a href="https://t.me/hesmyy" target="_blank" rel="noopener">
+        <span class="highlight">Telegram:</span> @hesmyy
+      </a>
+    </div>
+    <div class="qr-code">
+      <!-- ТУТ ВСТАВ СВОЄ ФОТО (QR-код) -->
+      <img src="qr.png" alt="QR для оплати">
+    </div>
+    <div class="btns">
+  <button class="btn btn-pay" onclick="showThankYou()">Я оплатив</button>
+  <button class="btn btn-back" onclick="window.location.href='roma.html'">Назад</button>
+</div>
+
+  </div>
+
+  <div class="thankyou-message" id="thankYouMessage">
+    💖 Дякую за замовлення! 💖
+  </div>
+
+  <script>
+    function showThankYou() {
+      const card = document.getElementById("paymentCard");
+      const thankYou = document.getElementById("thankYouMessage");
+
+      // плавно сховаємо картку
+      card.style.opacity = "0";
+      card.style.transform = "scale(0.9)";
+
+      setTimeout(() => {
+        card.style.display = "none";
+        thankYou.style.display = "block";
+      }, 500); // після анімації картки
+    }
+  </script>
+</body>
+</html>
+

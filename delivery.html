@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Доставка та оплата | KASILIA.DRESS</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ </style>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">KASILIA.DRESS</div>
+
+    <div class="search-block">
+      <input type="text" placeholder="Пошук">
+      <img src="icon-search.png" alt="Пошук">
+    </div>
+
+    <div class="paw-block">
+      <img src="paw.png" alt="Лапка котика" class="paw">
+    </div>
+
+    <div class="icon-block">
+      <img src="icon-heart.png" alt="Обране" id="open-favorites">
+      <img src="icon-cart.png" alt="Кошик" id="open-cart">
+      <span id="user-name" style="display:none;"></span>
+      <button id="sign-out-btn" style="display:none;">Вийти</button>
+    </div>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="#" class="active"><b>ГОЛОВНА</b></a>
+    <a href="novinki1.html"><b>НОВИНКИ</b></a>
+    <a href="novinki2.html"><b>ХІТИ ПРОДАЖІВ</b></a>
+    <a href="novinki3.html"><b>БЛОГ</b></a>
+    <a href="novinki4.html"><b>МИ</b></a>
+  </nav>
+</header>
+
+<!-- 🟡 Кошик -->
+<div id="cart-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Кошик</h2>
+    <ul id="cart-list" style="list-style:none; padding:0;"></ul>
+    <a href="oplata.html"><button class="cart-button checkout-button">Оформити замовлення</button></a>
+    <button class="cart-button close-button" id="close-cart">Закрити</button>
+  </div>
+</div>
+
+<!-- 🟡 Детальніше -->
+<div id="product-details-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <button class="close-button" id="close-details">✕ Закрити</button>
+    <div id="product-details-inner"></div>
+  </div>
+</div>
+  <!-- Контент -->
+  <main class="main-content info-page">
+    <div class="info-container">
+      <h1>Доставка та оплата</h1>
+
+      <p>Ми прагнемо, щоб покупки у нашому магазині були зручними та приємними. Нижче ви знайдете всю необхідну інформацію про способи доставки та оплати.</p>
+
+      <h2>Способи доставки</h2>
+      <ul>
+        <li><b>Кур’єрська доставка по Києву</b> – швидко та зручно, зазвичай 1–2 дні.</li>
+        <li><b>Нова Пошта та інші служби доставки по Україні</b> – термін доставки від 1 до 5 робочих днів.</li>
+        <li><b>Самовивіз</b> – ви можете забрати замовлення самостійно з нашого магазину за попередньою домовленістю.</li>
+      </ul>
+
+      <h2>Вартість доставки</h2>
+      <ul>
+        <li>По Києву: <b>безкоштовно</b> при замовленні від 3000 грн, або фіксована вартість – 150 грн.</li>
+        <li>По Україні: згідно з тарифами служби доставки.</li>
+      </ul>
+
+      <h2>Оплата</h2>
+      <ul>
+        <li><b>Готівкою кур’єру</b> при отриманні замовлення.</li>
+        <li><b>Оплата банківською карткою</b> онлайн через сайт (Visa, Mastercard).</li>
+        <li><b>Оплата через Приват24</b> або інші мобільні додатки за домовленістю.</li>
+      </ul>
+
+      <h2>Важливі моменти</h2>
+      <ul>
+        <li>Після оформлення замовлення наш менеджер зв’яжеться з вами для підтвердження.</li>
+        <li>Всі ціни вказані в гривнях та включають ПДВ.</li>
+        <li>При отриманні замовлення обов’язково перевіряйте упаковку та відповідність товару.</li>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>

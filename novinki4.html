@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ми — KASILIA.DRESS</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fdf2f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 18px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #d46d9a;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .hero img {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      transition: transform .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .team img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    .reviews blockquote {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    }
+    .quote h2 {
+      font-style: italic;
+      text-align: center;
+      color: #b84f80;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 2s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .cta {
+      text-align: center;
+      background: #fff;
+      border-radius: 14px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .cta a {
+      display: inline-block;
+      background: #d46d9a;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .3s;
+    }
+    .cta a:hover {
+      background: #b84f80;
+    }
+    /* Форма відгуків */
+    .review-form {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .review-form h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #d46d9a;
+    }
+    .review-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .review-form input,
+    .review-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      resize: none;
+    }
+    .review-form button {
+      align-self: center;
+      background: #d46d9a;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .review-form button:hover {
+      background: #b84f80;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">KASILIA.DRESS</div>
+    <div class="search-block">
+      <input type="text" placeholder="Пошук">
+      <img src="icon-search.png" alt="Пошук">
+    </div>
+    <div class="paw-block">
+      <img src="paw.png" alt="Лапка котика" class="paw">
+    </div>
+    <div class="icon-block">
+      <img src="icon-heart.png" alt="Обране" id="open-favorites">
+      <img src="icon-cart.png" alt="Кошик" id="open-cart">
+      <span id="user-name" style="display:none;"></span>
+      <button id="sign-out-btn" style="display:none;">Вийти</button>
+    </div>
+  </div>
+  <nav class="nav-menu">
+    <a href="index.html"><b>ГОЛОВНА</b></a>
+    <a href="novinki1.html"><b>НОВИНКИ</b></a>
+    <a href="novinki2.html"><b>ХІТИ ПРОДАЖІВ</b></a>
+    <a href="novinki3.html"><b>БЛОГ</b></a>
+    <a href="novinki4.html" class="active"><b>МИ</b></a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Ми створюємо красу для вас</h1>
+    <p>Наш бренд — це про ніжність, турботу та стиль. KASILIA.DRESS об’єднує мрії маленьких принцес та впевненість дорослих жінок.</p>
+  </section>
+
+  <section>
+    <h2>Наші цінності</h2>
+    <div class="cards-row">
+      <div class="card">👗 Якість понад усе</div>
+      <div class="card">💖 Турбота про клієнтів</div>
+      <div class="card">🌿 Натхнення з життя</div>
+      <div class="card">✨ Сімейність і любов</div>
+    </div>
+  </section>
+
+  <section class="history">
+    <h2>Наша історія</h2>
+    <div class="cards-row">
+      <div class="card"><h4>2018</h4><p>Перші ескізи та мрії про бренд.</p></div>
+      <div class="card"><h4>2022</h4><p>Пошиття колекції для друзів та перших клієнтів.</p></div>
+      <div class="card"><h4>2025</h4><p>Вихід у соцмережі та відкриття онлайн-магазину.</p></div>
+      <div class="card"><h4>Сьогодні</h4><p>Ми з любов’ю створюємо образи для свят та щоденності 💖</p></div>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Наша команда</h2>
+    <div class="cards-row">
+      <div class="card">
+        <img src="imagesteam1.jpg" alt="">
+        <h4>Василина</h4>
+        <p>Дизайнер, менеджер</p>
+      </div>
+      <div class="card">
+        <img src="imagesteam2.jpg" alt="">
+        <h4>Анастасія</h4>
+        <p>Фотограф</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h2>Відгуки клієнтів</h2>
+    <div id="reviews-list" class="cards-row">
+      <blockquote>«Сукня з KASILIA.DRESS зробила мій день особливим!» – Олена</blockquote>
+      <blockquote>«Дуже ніжні тканини, ідеальний крій. Дякую!» – Марина</blockquote>
+    </div>
+
+    <!-- Форма -->
+    <div class="review-form">
+      <h3>Залишити свій відгук</h3>
+      <form id="reviewForm" method="POST" action="https://docs.google.com/forms/d/e/ВАШ_ID_FORM/formResponse" target="hidden_iframe">
+        <input type="text" name="entry.123456" id="name" placeholder="Ваше ім’я" required>
+        <textarea name="entry.654321" id="review" placeholder="Ваш відгук" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
+  </section>
+
+  <section class="quote">
+    <h2>«Кожна сукня — це історія, яку ми створюємо разом з вами»</h2>
+  </section>
+
+  <section class="cta">
+    <h2>Хочете стати частиною нашої історії?</h2>
+    <a href="https://www.instagram.com/future_fashion_ukraine_2025?utm_source=ig_web_button_share_sheet&igsh=d2Vkc3NjNmJwYWhl">Переглянути колекцію</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Допомога</h4>
+      <ul>
+        <li><a href="delivery.html">Доставка та оплата</a></li>
+        <li><a href="obmin.html">Обмін та повернення</a></li>
+        <li><a href="privacy.html">Політика конфіденційності</a></li>
+        <li><a href="oferta.html">Оферта</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Про компанію</h4>
+      <ul>
+        <li><a href="kontakty.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Дізнатися більше про нас</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/..."><img src="Facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/kasilia_dress"><img src="Instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@kasilia_dress.shop"><img src="TikTok.png" alt="TikTok"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('reviewForm');
+  const reviewsList = document.getElementById('reviews-list');
+
+  // Завантаження локальних відгуків
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    savedReviews.forEach(r => addReviewToDOM(r.name, r.text));
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const review = document.getElementById('review').value.trim();
+
+    if (name && review) {
+      addReviewToDOM(name, review);
+
+      // Локальне збереження
+      const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+      savedReviews.push({ name, text: review });
+      localStorage.setItem("reviews", JSON.stringify(savedReviews));
+
+      // Відправка у Google Form
+      form.submit();
+
+      form.reset();
+    }
+  });
+
+  function addReviewToDOM(name, review) {
+    const blockquote = document.createElement('blockquote');
+    blockquote.textContent = `«${review}» – ${name}`;
+    reviewsList.appendChild(blockquote);
+  }
+</script>
+</body>
+</html>

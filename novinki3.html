@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Купити дитячу святкову сукню</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">KASILIA.DRESS</div>
+
+    <div class="search-block">
+      <input type="text" placeholder="Пошук">
+      <img src="icon-search.png" alt="Пошук">
+    </div>
+
+<div class="paw-block">
+  <img src="paw.png" alt="Лапка котика" class="paw">
+</div>
+    <div class="icon-block">
+      <img src="icon-heart.png" alt="Обране" id="open-favorites">
+      <img src="icon-cart.png" alt="Кошик" id="open-cart">
+      <span id="user-name" style="display:none;"></span>
+      <button id="sign-out-btn" style="display:none;">Вийти</button>
+    </div>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="index.html"><b>ГОЛОВНА</b></a>
+    <a href="novinki1.html"><b>НОВИНКИ</b></a>
+    <a href="novinki2.html"><b>ХІТИ ПРОДАЖІВ</b></a>
+    <a href="novinki3.html" class="active"><b>БЛОГ</b></a>
+    <a href="novinki4.html"><b>МИ</b></a>
+  </nav>
+</header>
+
+<!-- 🟡 Кошик (єдина версія) -->
+<div id="cart-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Кошик</h2>
+    <ul id="cart-list" style="list-style:none; padding:0;"></ul>
+    <button class="cart-button checkout-button">Оформити замовлення</button>
+    <button class="cart-button close-button" id="close-cart">Закрити</button>
+  </div>
+</div>
+<div id="favorites-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Обране</h2>
+    <ul id="favorites-list" style="list-style:none; padding:0;"></ul>
+    <button class="cart-button close-button" id="close-favorites">Закрити</button>
+  </div>
+</div>
+
+<!-- 🟡 Модальне вікно "Детальніше" -->
+<div id="product-details-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <button class="close-button" id="close-details">✕ Закрити</button>
+    <div id="product-details-inner"></div>
+  </div>
+</div>
+
+  <!-- Блог / пости -->
+  <section aria-label="Пости блогу" style="max-width:1200px;margin:28px auto;padding:0 18px">
+    <div class="cards-row">
+      <a href="idei.html" style="text-decoration:none; color:inherit;">
+  <article class="post reveal">
+    <img src="imagesblog1.jpg" alt="Пост 1" style="width:100%;height:180px;object-fit:cover;border-radius:10px">
+    <div class="meta">
+      <h4>5 ідей для святкового образу</h4>
+      <p>Поради щодо аксесуарів та текстильних поєднань від наших стилістів.</p>
+    </div>
+  </article>
+</a>
+
+      <article class="post reveal">
+        <img src="imagesblog3.jpg" alt="Пост 3" style="width:100%;height:180px;object-fit:cover;border-radius:10px">
+        <div class="meta">
+          <h4>Сукні, що підходять для урочистих заходів</h4>
+          <p>Наша добірка образів, які підкорять вечір.</p>
+        </div>
+      </article>
+
+      <article class="post reveal">
+        <img src="imagesblog4.jpg" alt="Пост 4" style="width:100%;height:180px;object-fit:cover;border-radius:10px">
+        <div class="meta">
+          <h4>Lookbook: весна — літо</h4>
+          <p>Яскраві комбінації кольорів та фактур.</p>
+        </div>
+      </article>
+
+      <article class="post reveal">
+        <img src="imagesblog6.jpg" alt="Пост 6" style="width:100%;height:180px;object-fit:cover;border-radius:10px">
+        <div class="meta">
+          <h4>Мінімалізм або шик — що обрати?</h4>
+          <p>Переваги обох стилів та як поєднувати.</p>
+        </div>
+      </article>
+    </div>
+      </article>
+    <!-- Instagram feed mockup -->
+    <div class="ig-feed reveal" style="margin-top:18px">
+      <div class="ig-heading" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong>Наш Instagram</strong>
+        <small style="color:var(--muted)">Оновлюємо щодня • <a href="https://www.instagram.com/kasilia_dress" target="_blank" rel="noopener">@kasilia_dress</a></small>
+      </div>
+      <div class="ig-scroll" id="igScroll" tabindex="0" aria-label="Instagram галерея">
+  <div class="ig-scroll" id="igScroll" tabindex="0" aria-label="Instagram галерея">
+        <div class="ig-card"><img src="imagesig1.jpg" alt="ig1"></div>
+        <div class="ig-card"><img src="imagesig2.jpg" alt="ig2"></div>
+        <div class="ig-card"><img src="imagesig3.jpg" alt="ig3"></div>
+        <div class="ig-card"><img src="imagesig4.jpg" alt="ig4"></div>
+        <div class="ig-card"><img src="imagesig5.jpg" alt="ig5"></div>
+        <div class="ig-card"><img src="imagesig6.jpg" alt="ig6"></div>
+        <div class="ig-card"><img src="imagesig7.jpg" alt="ig1"></div>
+        <div class="ig-card"><img src="imagesig8.jpg" alt="ig2"></div>
+        <div class="ig-card"><img src="imagesig9.jpg" alt="ig3"></div>
+        <div class="ig-card"><img src="imagesig10.jpg" alt="ig4"></div>
+        <div class="ig-card"><img src="imagesig11.jpg" alt="ig5"></div>
+      </div>
+    </div> 
+  </section>
+</main>
+
+<!-- floating bubble -->
+<button class="float-bubble" aria-label="Переход до Instagram" onclick="openInstagram()" title="Наш Instagram">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z" stroke="#d46d9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="#d46d9a" stroke-width="1.4"/><circle cx="18.2" cy="5.8" r="0.6" fill="#d46d9a"/></svg>
+</button>
+
+<!-- Footer (простий) -->
+<footer class="footer">
+  <div class="footer-container" style="max-width:1200px;margin:0 auto;padding:18px;display:flex;gap:24px;flex-wrap:wrap">
+    <div style="flex:1;min-width:180px">
+      <h4>Допомога</h4>
+      <ul style="padding:0;margin:0;list-style:none">
+        <li><a href="delivery.html">Доставка та оплата</a></li>
+        <li><a href="obmin.html">Обмін та повернення</a></li>
+        <li><a href="privacy.html">Політика конфіденційності</a></li>
+        <li><a href="oferta.html">Оферта</a></li>
+      </ul>
+    </div>
+    <div style="flex:1;min-width:180px">
+      <h4>Про компанію</h4>
+      <ul style="padding:0;margin:0;list-style:none">
+        <li><a href="kontakty.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div style="flex:1;min-width:180px">
+      <div class="footer-column">
+      <h4>Дізнатися більше про нас</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/..."><img src="Facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/kasilia_dress"><img src="Instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@kasilia_dress.shop"><img src="TikTok.png" alt="TikTok"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Reveal on scroll */
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+},{threshold:0.12});
+reveals.forEach(r => io.observe(r));
+
+/* Details overlay (Детальніше) */
+document.addEventListener('DOMContentLoaded', () => {
+  const productOverlay = document.getElementById('product-details-overlay');
+  const closeDetailsBtn = document.getElementById('close-details');
+  const inner = document.getElementById('product-details-inner');
+
+  document.querySelectorAll('.details-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.product-card');
+      if(!card) return;
+      const name = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+      const price = card.querySelector('p') ? card.querySelector('p').textContent : '';
+      const imgEl = card.querySelector('img');
+      const imgSrc = imgEl ? imgEl.getAttribute('src') : '';
+
+      inner.innerHTML = `
+        <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:0 0 220px"><img src="${imgSrc}" alt="${name}" style="width:100%;border-radius:10px"></div>
+          <div style="flex:1;min-width:180px">
+            <h3 style="margin-top:0">${name}</h3>
+            <p><strong>Ціна:</strong> ${price}</p>
+            <p><strong>Опис:</strong> Тут можна додати більше інформації про товар — матеріали, розміри, догляд, наявність.</p>
+            <div style="margin-top:10px">
+              <button id="to-cart" style="padding:8px 12px;border-radius:8px;border:0;background:${getComputedStyle(document.documentElement).getPropertyValue('--accent')||'#d46d9a'};color:#fff;cursor:pointer">Додати в кошик</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      productOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeOverlay() {
+    productOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  closeDetailsBtn.addEventListener('click', closeOverlay);
+  productOverlay.addEventListener('click', e => { if(e.target === productOverlay) closeOverlay(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeOverlay(); });
+
+  /* simple favorites/cart openers (для демонстрації) */
+  document.getElementById('open-favorites').addEventListener('click', () => {
+    document.getElementById('favorites-overlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('close-favorites')?.addEventListener('click', () => {
+    document.getElementById('favorites-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  document.getElementById('open-cart').addEventListener('click', () => {
+    document.getElementById('cart-overlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('close-cart')?.addEventListener('click', () => {
+    document.getElementById('cart-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  });
+});
+
+/* Image modal: enlarge click on blog/ig/featured images */
+document.addEventListener('click', (e) => {
+  const clicked = e.target;
+  if (clicked && clicked.tagName === 'IMG' && (clicked.closest('.post') || clicked.closest('.ig-card') || clicked.closest('.featured-item'))) {
+    const modal = document.createElement('div');
+    modal.className = 'img-modal';
+    modal.innerHTML = `<img src="${clicked.getAttribute('src')}" alt="${clicked.getAttribute('alt')||''}">`;
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+
+    function close() {
+      if(modal.parentNode) modal.remove();
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    }
+    modal.addEventListener('click', close);
+    function onKey(ev){ if(ev.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+  }
+});
+
+/* IG scroll keyboard nav & helpers */
+function openInstagram(){ window.open('https://www.instagram.com/kasilia_dress','_blank'); }
+function subscribePrompt(){ const email = prompt('Введіть ваш email для підписки:'); if(email) alert('Дякуємо! Ми додамо вас до листа.'); }
+const igScroll = document.getElementById('igScroll');
+igScroll && igScroll.addEventListener('keydown', (e) => {
+  if(e.key === 'ArrowRight') igScroll.scrollBy({left:160, behavior:'smooth'});
+  if(e.key === 'ArrowLeft') igScroll.scrollBy({left:-160, behavior:'smooth'});
+});
+
+/* маленька анімація лапки */
+const paw = document.querySelector('.paw');
+if(paw){
+  paw.style.transition = 'transform .45s ease-in-out';
+  let dir = 1;
+  setInterval(()=>{ paw.style.transform = `rotate(${dir*10}deg)`; dir *= -1; }, 900);
+}
+
+</script>
+<script src="favorites.js"></script>
+</body>
+</html>

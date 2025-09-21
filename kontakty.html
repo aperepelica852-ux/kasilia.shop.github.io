@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакти | KASILIA.DRESS</title>
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Контакти сторінка */
+    .contact-page {
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+      background-color: #FFE4EE;
+    }
+    .contact-container {
+      max-width: 800px;
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      line-height: 1.8;
+      color: #333;
+    }
+    .contact-container h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    .contact-container h2 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #000;
+    }
+    .contact-container p,
+    .contact-container ul,
+    .contact-container li {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .contact-container ul {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .contact-item img {
+      width: 28px;
+      height: 28px;
+    }
+    .contact-item span {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+ </style>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">KASILIA.DRESS</div>
+
+    <div class="search-block">
+      <input type="text" placeholder="Пошук">
+      <img src="icon-search.png" alt="Пошук">
+    </div>
+
+    <div class="paw-block">
+      <img src="paw.png" alt="Лапка котика" class="paw">
+    </div>
+
+    <div class="icon-block">
+      <img src="icon-heart.png" alt="Обране" id="open-favorites">
+      <img src="icon-cart.png" alt="Кошик" id="open-cart">
+      <span id="user-name" style="display:none;"></span>
+      <button id="sign-out-btn" style="display:none;">Вийти</button>
+    </div>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="index.html" class="active"><b>ГОЛОВНА</b></a>
+    <a href="novinki1.html"><b>НОВИНКИ</b></a>
+    <a href="novinki2.html"><b>ХІТИ ПРОДАЖІВ</b></a>
+    <a href="novinki3.html"><b>БЛОГ</b></a>
+    <a href="novinki4.html"><b>МИ</b></a>
+  </nav>
+</header>
+
+<!-- 🟡 Кошик -->
+<div id="cart-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <h2>Кошик</h2>
+    <ul id="cart-list" style="list-style:none; padding:0;"></ul>
+    <a href="oplata.html"><button class="cart-button checkout-button">Оформити замовлення</button></a>
+    <button class="cart-button close-button" id="close-cart">Закрити</button>
+  </div>
+</div>
+
+<!-- 🟡 Детальніше -->
+<div id="product-details-overlay" class="details-overlay" style="display:none;">
+  <div class="details-content">
+    <button class="close-button" id="close-details">✕ Закрити</button>
+    <div id="product-details-inner"></div>
+  </div>
+</div>
+  <!-- Контент -->
+  <main class="main-content contact-page">
+    <div class="contact-container">
+      <h1>Контакти</h1>
+
+      <p>Ми завжди раді вашим питанням та відгукам! Зв’яжіться з нами зручним для вас способом.</p>
+
+      <h2>Наші контакти</h2>
+      <ul>
+        <li class="contact-item">
+          <img src="icon-phone.png" alt="Телефон">
+          <span>+38 (099) 123-45-67</span>
+        </li>
+        <li class="contact-item">
+          <img src="icon-email.png" alt="Email">
+          <span>info@kasilia.dress</span>
+        </li>
+        <li class="contact-item">
+          <img src="icon-location.png" alt="Адреса">
+          <span>м. Київ, вул. Святкова, 12</span>
+        </li>
+        <li class="contact-item">
+          <img src="icon-clock.png" alt="Години роботи">
+          <span>Пн–Нд: 09:00 – 20:00</span>
+        </li>
+      </ul>
+
+      <h2>Зворотній зв’язок</h2>
+      <p>Ви можете надіслати нам повідомлення на електронну пошту. Ми обов’язково відповімо протягом 24 годин.</p>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>
